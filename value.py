@@ -54,7 +54,7 @@ class Value:
 
     def __truediv__(self, other):
         other = other if isinstance(other, Value) else Value(other)
-        return self + other**-1
+        return self * other**-1
 
     def __neg__(self):
         return self * -1
