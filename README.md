@@ -27,6 +27,16 @@ Value → Neuron → Layer → MLP
 - Gradient-based optimization
 - Computational graph visualization
 
+## Technologies
+Python
+Jupyter Notebook
+Graphviz
+Motivation
+
+The goal of this project is to understand the mathematical and
+computational mechanisms behind neural networks rather than relying
+entirely on high-level machine-learning frameworks.
+
 ## Project Structure
 
 ```text
@@ -41,3 +51,4 @@ neural_network_from_scratch.ipynb
 
 requirements.txt
     Python dependencies
+
