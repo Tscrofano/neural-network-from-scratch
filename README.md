@@ -2,7 +2,8 @@
 
 A small neural-network framework implemented from scratch in Python to
 understand automatic differentiation, computational graphs, and
-backpropagation.
+backpropagation. Made with the help of Andrej Karpathy's "
+The spelled-out intro to neural networks and backpropagation: building micrograd" informative YouTube video.
 
 ## Overview
 
