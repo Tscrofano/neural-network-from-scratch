@@ -70,13 +70,45 @@ print(output)
 #MLP
 """
 
-model = MLP(3, [4, 4, 1])
+n = MLP(3, [4, 4, 1])
 
 x = [2.0, 3.0, -1.0]
 
 prediction = model(x)
 
 print(prediction)
+
+"""
+Training
+"""
+
+xs = [
+    [2.0, 3.0, -1.0],
+    [3.0, -1.0, 0.5],
+    [0.5, 1.0, 1.0],
+    [1.0, 1.0, -1.0]
+]
+
+ys = [1.0, -1.0, -1.0, 1.0]
+
+ypred = [model(x) for x in xs]
+
+for k in range(20):
+    
+    #forward pass
+    ypred = [n(x) for x in xs]
+    loss = sum([(yout - ygt)**2 for ygt, yout in zip(ys, ypred)])
+
+    #UPDATE 
+    for p in n.parameters(): #n.parameters() contains all of the weights and biases
+        p.grad = 0.0
+    loss.backward() #creates new p.grads based on the new p.datas
+
+    #Goes against gradient to reduce loss function
+    for p in n.parameters():
+        p.data += -0.05 * p.grad #pushes p.data to our ys / ygt
+
+    print(k, loss.data)
 
 
 
