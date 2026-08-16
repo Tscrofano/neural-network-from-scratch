@@ -26,6 +26,7 @@ class Layer:
   
   def parameters(self):
     return [p for neuron in self.neurons for p in neuron.parameters()]
+      
 class MLP:
   
   def __init__(self, nin, nouts):
