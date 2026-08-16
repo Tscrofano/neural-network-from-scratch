@@ -1,25 +1,42 @@
 # Neural Network From Scratch
 
-A fully connected neural network implemented from scratch in Python,
-including automatic differentiation and backpropagation.
+A small neural-network framework implemented from scratch in Python to
+understand automatic differentiation, computational graphs, and
+backpropagation.
+
+## Overview
+
+This project implements a basic neural network without using
+PyTorch, TensorFlow, or other machine-learning frameworks.
+
+The project builds a neural network from the ground up:
+
+Value → Neuron → Layer → MLP
 
 ## Features
 
 - Scalar automatic differentiation
 - Computational graph construction
 - Reverse-mode backpropagation
-- Neurons and layers
-- Multilayer perceptron (MLP)
-- Tanh activation
+- Custom mathematical operators
+- Tanh activation function
+- Neuron and layer abstractions
+- Multilayer perceptron
+- Squared-error loss
 - Gradient-based optimization
-- Graphviz computational graph visualization
+- Computational graph visualization
 
-## Architecture
+## Project Structure
 
-Value → Neuron → Layer → MLP
+```text
+value.py
+    Automatic differentiation engine
 
-## Technologies
+neural_network.py
+    Neuron, Layer, and MLP classes
 
-- Python
-- Jupyter
-- Graphviz
+neural_network_from_scratch.ipynb
+    Demonstrations and experiments
+
+requirements.txt
+    Python dependencies
